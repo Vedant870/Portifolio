@@ -1,350 +1,368 @@
-import './App.css'
-import Tilt from "react-parallax-tilt";
-import profile from "./assets/profile.png";
+import './App.css';
+import Tilt from 'react-parallax-tilt';
+import profile from './assets/profile.png';
 
-<div className="panel__body">
+const skills = [
+  {
+    title: 'AI + Computer Vision',
+    description: 'OpenCV workflows, real-time inference tuning, and model integration for practical products.',
+    focus: 'Real-time systems',
+  },
+  {
+    title: 'Frontend Engineering',
+    description: 'React + Vite experiences with responsive UI architecture, polished interactions, and performance focus.',
+    focus: 'UX + speed',
+  },
+  {
+    title: 'Backend & APIs',
+    description: 'Node.js + Express services, modular API design, authentication flows, and production-ready patterns.',
+    focus: 'Scalable services',
+  },
+  {
+    title: 'Data & Dev Tools',
+    description: 'MongoDB, MySQL, Git, Postman, Linux basics, and deployment-minded engineering workflows.',
+    focus: 'Reliable delivery',
+  },
+];
 
-  <div className="profile__wrap">
-    <img
-      src={profile}
-      alt="Vedant Kasaudhan"
-      className="profile__img"
-    />
-  </div>
+const projects = [
+  {
+    title: 'Driver Drowsiness Detection',
+    stack: 'Python • OpenCV • PyTorch • API Integration',
+    impact:
+      'Built a real-time safety system that tracks eye movement and facial cues with low-latency predictions.',
+    highlights: [
+      'Optimized processing loop for 20+ FPS behavior on constrained hardware.',
+      'Designed clean extension points for alerts, analytics, and deployment.',
+      'Focused on reliability under varied lighting and camera conditions.',
+    ],
+    source: 'https://github.com/vedant870',
+    demo: 'https://www.linkedin.com/in/vedant-kasaudhan-9a444a291/',
+  },
+  {
+    title: 'Social Platform Analyzer',
+    stack: 'React • Node.js • Express • MongoDB',
+    impact:
+      'Engineered a full-stack analytics platform to process user interaction data and surface decision-ready insights.',
+    highlights: [
+      'Structured REST services with modular architecture and reusable middleware.',
+      'Applied DSA-backed optimizations to improve processing speed and stability.',
+      'Connected frontend state and backend logic for a complete product flow.',
+    ],
+    source: 'https://github.com/vedant870',
+    demo: 'https://www.linkedin.com/in/vedant-kasaudhan-9a444a291/',
+  },
+  {
+    title: 'PromptLab Portfolio System',
+    stack: 'React • Vite • AI Content Tooling',
+    impact:
+      'Created a next-generation personal brand site with dynamic storytelling and conversion-focused visual design.',
+    highlights: [
+      'Glassmorphism + neon palette with smooth micro-interactions.',
+      'Modular sections for rapid edits, growth, and future case studies.',
+      'Balanced visual impact with readable content hierarchy.',
+    ],
+    source: 'https://github.com/vedant870',
+    demo: 'https://www.linkedin.com/in/vedant-kasaudhan-9a444a291/',
+  },
+];
 
-  <div className="chip">Aspiring Software Engineer</div>
-  ...
-</div>
+const experience = [
+  {
+    role: 'AI Intern',
+    org: 'HRFI',
+    period: '2025',
+    points: [
+      'Supported backend logic and data pipelines for AI-assisted workflows.',
+      'Improved reliability through debugging, profiling, and optimization.',
+      'Collaborated on production-grade code with scalable architecture goals.',
+    ],
+  },
+  {
+    role: 'Open Source Contributor',
+    org: 'GirlScript Summer of Code (GSSoC)',
+    period: '2024',
+    points: [
+      'Delivered feature enhancements and bug fixes through Git-based collaboration.',
+      'Contributed reusable components with clean coding standards.',
+      'Maintained readable docs and review-friendly pull requests.',
+    ],
+  },
+  {
+    role: 'B.Tech CSE (AI/ML)',
+    org: 'Galgotias University',
+    period: '2023 — 2027',
+    points: [
+      'Building strong foundations in algorithms, software engineering, and ML systems.',
+      'Applying academics to practical products, internships, and hackathon prototypes.',
+      'Continuously upskilling in modern AI + full-stack engineering.',
+    ],
+  },
+];
 
+const quickFacts = [
+  '400+ DSA problems solved',
+  'AI/ML + full-stack builder',
+  'Open to internships & collaborations',
+];
 
 function App() {
   return (
     <div className="page">
-      <header className="nav">
+      <div className="ambient ambient--one" />
+      <div className="ambient ambient--two" />
+      <div className="ambient ambient--three" />
+
+      <header className="nav glass">
         <div className="brand">
-          <span className="brand__glow" />
+          <span className="brand__dot" />
           <span className="brand__text">Vedant Kasaudhan</span>
-          <span className="brand__tag">AI/ML Engineer</span>
+          <span className="brand__tag">AI / Full-Stack Engineer</span>
         </div>
-        <nav className="nav__links">
+
+        <nav className="nav__links" aria-label="Primary">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
-          <a href="#contact" className="btn btn--ghost">Let’s Connect</a>
+          <a href="#contact" className="btn btn--ghost btn--sm">
+            Contact
+          </a>
         </nav>
       </header>
 
       <main>
-        <section className="hero" id="about">
+        <section id="about" className="section hero">
           <div className="hero__content">
-            <p className="eyebrow">B.Tech CSE (AIML) • Galgotias University</p>
+            <p className="eyebrow">B.Tech CSE (AI/ML) • Galgotias University</p>
             <h1>
-              Building <span className="accent">AI-first</span> products
-              <br /> for the next generation.
+              Designing <span className="accent">AI-native</span> experiences for the new internet.
             </h1>
-            <p className="hero__sub">
-              I’m a full-stack + AI developer crafting scalable web apps, intelligent systems,
-              and data-driven experiences. I love turning complex ideas into clean, high-impact
-              products.
+            <p className="hero__summary">
+              I build modern web and AI products that are fast, scalable, and user-first. My focus is
+              on shipping practical solutions with clean architecture and strong visual quality.
             </p>
+
             <div className="hero__actions">
-              <a className="btn btn--primary" href="#projects">Explore Projects</a>
-              <a className="btn btn--outline" href="/vite.svg" download>Download Resume</a>
+              <a href="#projects" className="btn btn--primary">
+                Explore Work
+              </a>
+              <a href="mailto:vedantkasaudhan@gmail.com" className="btn btn--outline">
+                Hire / Collaborate
+              </a>
             </div>
-            <div className="hero__stats">
-              <div>
+
+            <div className="statset" role="list" aria-label="Highlights">
+              <div className="statset__item" role="listitem">
                 <h3>400+</h3>
-                <span>DSA problems solved</span>
+                <p>Problems solved</p>
               </div>
-              <div>
+              <div className="statset__item" role="listitem">
                 <h3>20+ FPS</h3>
-                <span>optimized AI vision demo</span>
+                <p>Vision optimization benchmark</p>
               </div>
-              <div>
-                <h3>2025</h3>
-                <span>Smart India Hackathon pre-qualifier</span>
+              <div className="statset__item" role="listitem">
+                <h3>2026</h3>
+                <p>Focused on internship-ready products</p>
               </div>
+            </div>
+
+            <div className="chips" aria-label="Quick facts">
+              {quickFacts.map((fact) => (
+                <span key={fact} className="chip">
+                  {fact}
+                </span>
+              ))}
             </div>
           </div>
-          <div className="hero__panel glass">
-            <div className="panel__header">
-              <span>AI Profile</span>
-              <div className="pulse" />
-            </div>
-            <div className="panel__body">
-              <div className="chip">Aspiring Software Engineer</div>
-              <h4>Focus areas</h4>
-              <ul>
-                <li>Full-stack apps (React, Node, Express)</li>
-                <li>AI/ML systems (Python, OpenCV)</li>
-                <li>Scalable backend APIs + databases</li>
+
+          <Tilt tiltMaxAngleX={7} tiltMaxAngleY={7} glareEnable glareMaxOpacity={0.2} scale={1.01}>
+            <aside className="hero__panel glass">
+              <div className="profile__wrap">
+                <img src={profile} alt="Portrait of Vedant Kasaudhan" className="profile__img" />
+              </div>
+
+              <p className="eyebrow">Now Building</p>
+              <h2 className="panel__title">AI-powered products with clean product thinking</h2>
+
+              <ul className="panel__list">
+                <li>Full-stack development with React, Node, and Express.</li>
+                <li>AI/ML integrations that solve real product problems.</li>
+                <li>Performance-focused and responsive UI systems.</li>
               </ul>
-              <div className="panel__actions">
-                <a className="btn btn--ghost" href="https://www.linkedin.com/in/vedant-kasaudhan-9a444a291/" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a className="btn btn--ghost" href="mailto:vedantkasaudhan@gmail.com">Email</a>
+
+              <div className="panel__row">
+                <a
+                  className="btn btn--ghost btn--sm"
+                  href="https://www.linkedin.com/in/vedant-kasaudhan-9a444a291/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  className="btn btn--ghost btn--sm"
+                  href="https://github.com/vedant870"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
               </div>
-            </div>
-          </div>
+            </aside>
+          </Tilt>
         </section>
 
         <section id="skills" className="section">
           <div className="section__header">
-            <h2>AI-native skills & toolchain</h2>
-            <p>Modern stack for building intelligent products, from UX to scalable backend systems.</p>
+            <h2>Future-ready engineering skill set</h2>
+            <p>
+              Built for today&apos;s product expectations: intelligent features, scalable backend systems,
+              and premium user experiences.
+            </p>
           </div>
-          <div className="grid">
-            {[
-  {
-    title: 'Web & Programming',
-    desc: 'JavaScript (ES6+), Python, Java, HTML5, CSS3, REST APIs.',
-  },
-  {
-    title: 'Frontend & Backend',
-    desc: 'React.js, Node.js, Express.js, responsive UI systems.',
-  },
-  {
-    title: 'AI/ML + Vision',
-    desc: 'OpenCV, AI prompt tooling, model tuning for real-time inference.',
-  },
-  {
-    title: 'Databases & Tools',
-    desc: 'MySQL, MongoDB, Postman, Git, Linux, Google Maps & Places API.',
-  },
-].map((item) => (
-  <Tilt
-    key={item.title}
-    tiltMaxAngleX={10}
-    tiltMaxAngleY={10}
-    glareEnable={true}
-    glareMaxOpacity={0.25}
-    scale={1.03}
-  >
-    <div className="card glass">
-      <h3>{item.title}</h3>
-      <p>{item.desc}</p>
-      <span className="card__tag">AI-ready</span>
-    </div>
-  </Tilt>
-))}
 
+          <div className="grid grid--skills">
+            {skills.map((skill) => (
+              <Tilt key={skill.title} tiltMaxAngleX={9} tiltMaxAngleY={9} glareEnable glareMaxOpacity={0.15}>
+                <article className="card card--skill glass">
+                  <h3>{skill.title}</h3>
+                  <p className="muted">{skill.description}</p>
+                  <span className="card__tag">{skill.focus}</span>
+                </article>
+              </Tilt>
+            ))}
           </div>
         </section>
 
-        <section id="projects" className="section section--lab">
+        <section id="projects" className="section">
           <div className="section__header">
             <h2>Selected AI + full-stack projects</h2>
-            <p>Problem-solving products built with modern stacks, performance focus, and clean architecture.</p>
+            <p>
+              Practical builds with measurable outcomes, clean code patterns, and modern visual
+              execution.
+            </p>
           </div>
-          <div className="grid grid--three">
-            {[
-              {
-                title: 'Coders of Delhi — Social Platform Analyzer',
-                stack: 'React.js, Node.js, Express.js, MongoDB, REST APIs',
-                impact: 'Built a social platform analyzer with clean REST flows and modular services.',
-                details: [
-                  'User data, posts, and interaction analytics with scalable architecture.',
-                  'Improved data processing logic using core DSA for performance.',
-                  'End-to-end system from frontend state to backend APIs.',
-                ],
-              },
-              {
-                title: 'Driver Drowsiness Detection (AI-Based)',
-                stack: 'Python, OpenCV, PyTorch, API Integration',
-                impact: 'Real-time driver safety system using facial & eye-movement analysis.',
-                details: [
-                  'Optimized model to reach 20+ FPS for low-resource devices.',
-                  'Clean API design for future extensions & deployment.',
-                  'Focused on production-ready reliability and precision.',
-                ],
-              },
-              {
-                title: 'PromptLab Portfolio OS',
-                stack: 'React, Vite, Framer UI, AI content tooling',
-                impact: 'AI-personalized portfolio with dynamic sections and real-time UX polish.',
-                details: [
-                  'Next-gen aesthetic with glassmorphism + neon gradients.',
-                  'Interactive cards, animations, and resume download.',
-                  'Ready for rapid customization and growth.',
-                ],
-              },
-            ].map((project) => (
-  <Tilt
-    key={project.title}
-    tiltMaxAngleX={10}
-    tiltMaxAngleY={10}
-    glareEnable={true}
-    glareMaxOpacity={0.25}
-    scale={1.03}
-  >
-    <div className="card card--project glass">
-      <h3>{project.title}</h3>
-      <p className="muted">{project.stack}</p>
-      <p>{project.impact}</p>
-      <ul>
-        {project.details.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-      <button className="btn btn--outline">View Case Study</button>
-    </div>
-  </Tilt>
-))}
 
-          </div>
-          <div className="ticker">
-            <span>✨ AI Vision</span>
-            <span>⚡ Node APIs</span>
-            <span>🎯 DSA Optimizations</span>
-            <span>🧠 Prompt Engineering</span>
-            <span>🚀 Product Scaling</span>
+          <div className="grid grid--projects">
+            {projects.map((project) => (
+              <Tilt
+                key={project.title}
+                tiltMaxAngleX={8}
+                tiltMaxAngleY={8}
+                glareEnable
+                glareMaxOpacity={0.12}
+              >
+                <article className="card card--project glass">
+                  <h3 className="project__title">{project.title}</h3>
+                  <p className="card__meta">{project.stack}</p>
+                  <p className="project__impact">{project.impact}</p>
+
+                  <ul className="project__highlights">
+                    {project.highlights.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+
+                  <div className="project__links">
+                    <a
+                      href={project.source}
+                      className="btn btn--outline btn--sm"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Source
+                    </a>
+                    <a
+                      href={project.demo}
+                      className="btn btn--ghost btn--sm"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Overview
+                    </a>
+                  </div>
+                </article>
+              </Tilt>
+            ))}
           </div>
         </section>
 
         <section id="experience" className="section">
-  <div className="section__header">
-    <h2>Experience & leadership</h2>
-    <p>Hands-on roles building scalable systems and collaborating in open-source environments.</p>
-  </div>
+          <div className="section__header">
+            <h2>Experience & growth timeline</h2>
+            <p>
+              I learn fast, build consistently, and focus on real execution quality in every role and
+              collaboration.
+            </p>
+          </div>
 
-  <div className="grid">
-    <Tilt
-      tiltMaxAngleX={10}
-      tiltMaxAngleY={10}
-      glareEnable={true}
-      glareMaxOpacity={0.25}
-      scale={1.03}
-    >
-      <div className="card glass">
-        <h3>AI Intern @ HRFI</h3>
-        <p className="muted">2025 • Stipend-based</p>
-        <ul>
-          <li>Worked on backend logic and data processing for AI-driven workflows.</li>
-          <li>Improved reliability and performance through debugging and optimization.</li>
-          <li>Supported scalable architecture for production-level codebases.</li>
-        </ul>
-      </div>
-    </Tilt>
-
-    <Tilt
-      tiltMaxAngleX={10}
-      tiltMaxAngleY={10}
-      glareEnable={true}
-      glareMaxOpacity={0.25}
-      scale={1.03}
-    >
-      <div className="card glass">
-        <h3>Open Source Contributor @ GSSoC</h3>
-        <p className="muted">2024</p>
-        <ul>
-          <li>Contributed code, bug fixes, and enhancements via Git-based workflows.</li>
-          <li>Collaborated on modular, reusable components and best practices.</li>
-          <li>Maintained clean documentation and peer-reviewed contributions.</li>
-        </ul>
-      </div>
-    </Tilt>
-
-    <Tilt
-      tiltMaxAngleX={10}
-      tiltMaxAngleY={10}
-      glareEnable={true}
-      glareMaxOpacity={0.25}
-      scale={1.03}
-    >
-      <div className="card glass">
-        <h3>Certifications</h3>
-        <p className="muted">AI + Full-stack</p>
-        <ul>
-          <li>Full Stack Developer — GeeksforGeeks</li>
-          <li>C++ (Intermediate) — HackerRank</li>
-          <li>AWS Cloud Foundation — AWS</li>
-          <li>Java for Beginners — HCL Guvi</li>
-          <li>Mist-AI Virtual Internship — Juniper Networks</li>
-        </ul>
-      </div>
-    </Tilt>
-  </div>
-</section>
-
-
-        <section id="education" className="section">
-  <div className="section__header">
-    <h2>Education</h2>
-    <p>Strong academic foundation with focus on AI/ML and computer science.</p>
-  </div>
-
-  <div className="grid">
-    <div className="card glass">
-      <h3>B.Tech CSE (AIML)</h3>
-      <p className="muted">Galgotias University • 2023 — 2027</p>
-    </div>
-
-    <div className="card glass">
-      <h3>Senior Secondary (12th)</h3>
-      <p className="muted">Jawahar Navodaya Vidyalaya • 2023</p>
-    </div>
-
-    <div className="card glass">
-      <h3>Secondary (10th)</h3>
-      <p className="muted">Jawahar Navodaya Vidyalaya • 2021</p>
-    </div>
-  </div>
-</section>
-
+          <div className="timeline">
+            {experience.map((item) => (
+              <article key={item.role} className="timeline__item glass">
+                <p className="timeline__year">{item.period}</p>
+                <div className="timeline__content">
+                  <h3>{item.role}</h3>
+                  <p className="muted">{item.org}</p>
+                  <ul>
+                    {item.points.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
         <section id="contact" className="section section--cta">
           <div className="cta glass">
-            <div>
-              <h2>Let’s build an AI-first future together</h2>
-              <p>Open to internships, collaborations, and full-stack + AI roles.</p>
-              <div className="contact__chips">
+            <div className="cta__left">
+              <h2>Let&apos;s build impactful products together</h2>
+              <p>
+                Open to internships, freelance opportunities, and long-term collaborations in AI and
+                full-stack engineering.
+              </p>
+
+              <div className="chips cta__chips">
                 <span className="chip">📞 +91 8707465693</span>
                 <span className="chip">✉️ vedantkasaudhan@gmail.com</span>
-                <span className="chip">LinkedIn: Vedant Kasaudhan</span>
+                <span className="chip">📍 India</span>
               </div>
             </div>
-            <form
-  className="cta__form"
-  action="https://formspree.io/f/xwvnedwn"
-  method="POST"
->
-  <input
-    type="email"
-    name="email"
-    placeholder="you@futuremail.com"
-    required
-  />
 
-  <textarea
-    name="message"
-    placeholder="Write your message..."
-    required
-  ></textarea>
-
-  <button className="btn btn--primary" type="submit">
-    Request collaboration
-  </button>
-
-  <p className="form__note">
-    ✅ Message will be sent directly to my email.
-  </p>
-</form>
-
-
+            <form className="cta__form" action="https://formspree.io/f/xwvnedwn" method="POST">
+              <input type="email" name="email" placeholder="you@futuremail.com" required />
+              <textarea
+                name="message"
+                placeholder="Tell me about your idea, role, or collaboration plan..."
+                required
+              />
+              <button className="btn btn--primary" type="submit">
+                Send Message
+              </button>
+              <p className="form__note">Message will be delivered directly to my email inbox.</p>
+            </form>
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        <span>© 2026 Vedant Kasaudhan. Crafted for the AI era.</span>
+        <span>© 2026 Vedant Kasaudhan • Crafted with React + AI mindset.</span>
         <div className="footer__links">
-          <a href="https://leetcode.com/u/vedantkasaudhan8707/" target="_blank" rel="noreferrer">LeetCode</a>
-          <a href="https://github.com/vedant870" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/vedant-kasaudhan-9a444a291/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://leetcode.com/u/vedantkasaudhan8707/" target="_blank" rel="noreferrer">
+            LeetCode
+          </a>
+          <a href="https://github.com/vedant870" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/vedant-kasaudhan-9a444a291/" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
         </div>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
