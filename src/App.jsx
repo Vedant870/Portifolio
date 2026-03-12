@@ -1,27 +1,30 @@
 import './App.css';
-import Tilt from 'react-parallax-tilt';
 import profile from './assets/profile.png';
 
 const skills = [
   {
     title: 'AI + Computer Vision',
-    description: 'OpenCV workflows, real-time inference tuning, and model integration for practical products.',
+    description:
+      'OpenCV workflows, real-time inference tuning, and model integration for practical products.',
     focus: 'Real-time systems',
   },
   {
     title: 'Frontend Engineering',
-    description: 'React + Vite experiences with responsive UI architecture, polished interactions, and performance focus.',
+    description:
+      'React + Vite experiences with responsive UI architecture, polished interactions, and performance focus.',
     focus: 'UX + speed',
   },
   {
-    title: 'Backend & APIs',
-    description: 'Node.js + Express services, modular API design, authentication flows, and production-ready patterns.',
+    title: 'Backend, APIs & Data',
+    description:
+      'Node.js + Express services, modular API design, secure data workflows, and production-ready integration patterns.',
     focus: 'Scalable services',
   },
   {
-    title: 'Data & Dev Tools',
-    description: 'MongoDB, MySQL, Git, Postman, Linux basics, and deployment-minded engineering workflows.',
-    focus: 'Reliable delivery',
+    title: 'Cybersecurity Visualization',
+    description:
+      'Threat analytics dashboards, geospatial attack mapping, trend analysis, and actionable reporting for security teams.',
+    focus: 'Insight-driven defense',
   },
 ];
 
@@ -36,34 +39,37 @@ const projects = [
       'Designed clean extension points for alerts, analytics, and deployment.',
       'Focused on reliability under varied lighting and camera conditions.',
     ],
+    tag: 'Computer Vision',
     source: 'https://github.com/vedant870',
     demo: 'https://www.linkedin.com/in/vedant-kasaudhan-9a444a291/',
   },
   {
-    title: 'Social Platform Analyzer',
-    stack: 'React • Node.js • Express • MongoDB',
+    title: 'Cyber Threat Visualization Dashboard',
+    stack: 'Python • Plotly Dash • Pandas • SQL',
     impact:
-      'Engineered a full-stack analytics platform to process user interaction data and surface decision-ready insights.',
+      'Built an interactive cybersecurity analytics dashboard that transforms threat-event data into analyst-ready visual intelligence.',
     highlights: [
-      'Structured REST services with modular architecture and reusable middleware.',
-      'Applied DSA-backed optimizations to improve processing speed and stability.',
-      'Connected frontend state and backend logic for a complete product flow.',
+      'Mapped origin-target threat routes and hotspot countries for global risk awareness.',
+      'Added trend + anomaly views to surface unusual attack surges from time-series data.',
+      'Implemented MITRE ATT&CK hierarchy visualization and executive-ready report export.',
     ],
-    source: 'https://github.com/vedant870',
-    demo: 'https://www.linkedin.com/in/vedant-kasaudhan-9a444a291/',
+    tag: 'Cybersecurity Analytics',
+    source: 'https://github.com/vedant870/Cyber-Threat-Visualization',
+    demo: 'https://github.com/vedant870/Cyber-Threat-Visualization',
   },
   {
-    title: 'PromptLab Portfolio System',
-    stack: 'React • Vite • AI Content Tooling',
+    title: 'Portifolio Website Platform',
+    stack: 'React • Vite • UI/UX Engineering',
     impact:
-      'Created a next-generation personal brand site with dynamic storytelling and conversion-focused visual design.',
+      'Designed and iterated a premium personal brand website with modern animations, cleaner content architecture, and professional storytelling.',
     highlights: [
-      'Glassmorphism + neon palette with smooth micro-interactions.',
-      'Modular sections for rapid edits, growth, and future case studies.',
-      'Balanced visual impact with readable content hierarchy.',
+      'Refined visual system with polished gradients, depth, and interaction effects.',
+      'Improved project storytelling for credibility, clarity, and recruiter impact.',
+      'Optimized structure for easy updates, long-term scaling, and deployment speed.',
     ],
-    source: 'https://github.com/vedant870',
-    demo: 'https://www.linkedin.com/in/vedant-kasaudhan-9a444a291/',
+    tag: 'Brand + Frontend',
+    source: 'https://github.com/vedant870/Portifolio',
+    demo: 'https://ai-platform-site.vercel.app',
   },
 ];
 
@@ -176,41 +182,39 @@ function App() {
             </div>
           </div>
 
-          <Tilt tiltMaxAngleX={7} tiltMaxAngleY={7} glareEnable glareMaxOpacity={0.2} scale={1.01}>
-            <aside className="hero__panel glass">
-              <div className="profile__wrap">
-                <img src={profile} alt="Portrait of Vedant Kasaudhan" className="profile__img" />
-              </div>
+          <aside className="hero__panel glass">
+            <div className="profile__wrap">
+              <img src={profile} alt="Portrait of Vedant Kasaudhan" className="profile__img" />
+            </div>
 
-              <p className="eyebrow">Now Building</p>
-              <h2 className="panel__title">AI-powered products with clean product thinking</h2>
+            <p className="eyebrow">Now Building</p>
+            <h2 className="panel__title">AI-powered products with clean product thinking</h2>
 
-              <ul className="panel__list">
-                <li>Full-stack development with React, Node, and Express.</li>
-                <li>AI/ML integrations that solve real product problems.</li>
-                <li>Performance-focused and responsive UI systems.</li>
-              </ul>
+            <ul className="panel__list">
+              <li>Full-stack development with React, Node, and Express.</li>
+              <li>AI/ML integrations that solve real product problems.</li>
+              <li>Performance-focused and responsive UI systems.</li>
+            </ul>
 
-              <div className="panel__row">
-                <a
-                  className="btn btn--ghost btn--sm"
-                  href="https://www.linkedin.com/in/vedant-kasaudhan-9a444a291/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  className="btn btn--ghost btn--sm"
-                  href="https://github.com/vedant870"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  GitHub
-                </a>
-              </div>
-            </aside>
-          </Tilt>
+            <div className="panel__row">
+              <a
+                className="btn btn--ghost btn--sm"
+                href="https://www.linkedin.com/in/vedant-kasaudhan-9a444a291/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a
+                className="btn btn--ghost btn--sm"
+                href="https://github.com/vedant870"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </aside>
         </section>
 
         <section id="skills" className="section">
@@ -224,13 +228,11 @@ function App() {
 
           <div className="grid grid--skills">
             {skills.map((skill) => (
-              <Tilt key={skill.title} tiltMaxAngleX={9} tiltMaxAngleY={9} glareEnable glareMaxOpacity={0.15}>
-                <article className="card card--skill glass">
-                  <h3>{skill.title}</h3>
-                  <p className="muted">{skill.description}</p>
-                  <span className="card__tag">{skill.focus}</span>
-                </article>
-              </Tilt>
+              <article key={skill.title} className="card card--skill glass">
+                <h3>{skill.title}</h3>
+                <p className="muted">{skill.description}</p>
+                <span className="card__tag">{skill.focus}</span>
+              </article>
             ))}
           </div>
         </section>
@@ -246,44 +248,37 @@ function App() {
 
           <div className="grid grid--projects">
             {projects.map((project) => (
-              <Tilt
-                key={project.title}
-                tiltMaxAngleX={8}
-                tiltMaxAngleY={8}
-                glareEnable
-                glareMaxOpacity={0.12}
-              >
-                <article className="card card--project glass">
-                  <h3 className="project__title">{project.title}</h3>
-                  <p className="card__meta">{project.stack}</p>
-                  <p className="project__impact">{project.impact}</p>
+              <article key={project.title} className="card card--project glass">
+                <h3 className="project__title">{project.title}</h3>
+                <span className="project__badge">{project.tag}</span>
+                <p className="card__meta">{project.stack}</p>
+                <p className="project__impact">{project.impact}</p>
 
-                  <ul className="project__highlights">
-                    {project.highlights.map((point) => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
+                <ul className="project__highlights">
+                  {project.highlights.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
 
-                  <div className="project__links">
-                    <a
-                      href={project.source}
-                      className="btn btn--outline btn--sm"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Source
-                    </a>
-                    <a
-                      href={project.demo}
-                      className="btn btn--ghost btn--sm"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Overview
-                    </a>
-                  </div>
-                </article>
-              </Tilt>
+                <div className="project__links">
+                  <a
+                    href={project.source}
+                    className="btn btn--outline btn--sm"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Source
+                  </a>
+                  <a
+                    href={project.demo}
+                    className="btn btn--ghost btn--sm"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Overview
+                  </a>
+                </div>
+              </article>
             ))}
           </div>
         </section>
@@ -350,6 +345,12 @@ function App() {
       <footer className="footer">
         <span>© 2026 Vedant Kasaudhan • Crafted with React + AI mindset.</span>
         <div className="footer__links">
+          <a href="https://ai-platform-site.vercel.app" target="_blank" rel="noreferrer">
+            Live Site
+          </a>
+          <a href="https://github.com/vedant870/Portifolio" target="_blank" rel="noreferrer">
+            Portifolio Repo
+          </a>
           <a href="https://leetcode.com/u/vedantkasaudhan8707/" target="_blank" rel="noreferrer">
             LeetCode
           </a>
