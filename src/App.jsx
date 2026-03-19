@@ -95,13 +95,13 @@ const experience = [
     ],
   },
   {
-    role: 'B.Tech CSE (AI/ML)',
-    org: 'Galgotias University',
-    period: '2023 — 2027',
+    role: 'Intership at Infosys',
+    org: 'Infosys Springboard',
+    period: '2026,
     points: [
-      'Building strong foundations in algorithms, software engineering, and ML systems.',
-      'Applying academics to practical products, internships, and hackathon prototypes.',
-      'Continuously upskilling in modern AI + full-stack engineering.',
+      'Building strong foundations on devloping soloution for real world problems.',
+      'Working on a Real world based project.,
+      'With best Mentorship and specificatios.,
     ],
   },
 ];
