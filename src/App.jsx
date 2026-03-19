@@ -97,7 +97,7 @@ const experience = [
   {
     role: 'Intership at Infosys',
     org: 'Infosys Springboard',
-    period: '2026,
+    period: '2026',
     points: [
       'Building strong foundations on devloping soloution for real world problems.',
       'Working on a Real world based project.,
