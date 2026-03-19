@@ -100,8 +100,8 @@ const experience = [
     period: '2026',
     points: [
       'Building strong foundations on devloping soloution for real world problems.',
-      'Working on a Real world based project.,
-      'With best Mentorship and specificatios.,
+      'Working on a Real world based project.',
+      'With best Mentorship and specificatios.',
     ],
   },
 ];
