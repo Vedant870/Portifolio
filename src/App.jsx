@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion';
-import { BookOpen, ExternalLink, Github, Mail, MessageSquare, Rocket } from 'lucide-react';
+import { BookOpen, ExternalLink, Code2, Mail, MessageSquare, Rocket } from 'lucide-react';
 import Tilt from 'react-parallax-tilt';
 import './App.css';
 import profile from './assets/profile.png';
@@ -397,7 +397,7 @@ function App() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Github size={16} /> GitHub
+                    <Code2 size={16} /> GitHub
                   </a>
                 </div>
               </aside>
@@ -519,7 +519,7 @@ function App() {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        <Github size={16} /> Source
+                        <Code2 size={16} /> Source
                       </a>
                       <a
                         href={project.demo}
