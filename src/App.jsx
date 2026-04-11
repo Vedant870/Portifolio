@@ -77,8 +77,8 @@ const projects = [
       'Structured the site for easy updates, faster deployment, and long-term brand scaling.',
     ],
     tag: 'Brand + Frontend',
-    source: 'https://github.com/vedant870/Portifolio',
-    demo: 'https://ai-platform-site.vercel.app',
+    source: 'https://github.com/Vedant870/Portifolio',
+    demo: 'https://vedantportifolio.vercel.app/',
   },
 ];
 
@@ -605,10 +605,10 @@ function App() {
       <footer className="footer">
         <span>© 2026 Vedant Kasaudhan • Crafted with React, motion, and AI product thinking.</span>
         <div className="footer__links">
-          <a href="https://ai-platform-site.vercel.app" target="_blank" rel="noreferrer">
+          <a href="https://vedantportifolio.vercel.app/" target="_blank" rel="noreferrer">
             Live Site
           </a>
-          <a href="https://github.com/vedant870/Portifolio" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Vedant870/Portifolio" target="_blank" rel="noreferrer">
             Portifolio Repo
           </a>
           <a href="https://leetcode.com/u/vedantkasaudhan8707/" target="_blank" rel="noreferrer">

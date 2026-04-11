@@ -209,6 +209,26 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.nav__links, .footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.nav__links a, .footer__links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav__links a:hover, .footer__links a:hover {
+  color: #fff;
+}
+
+
 .brand__dot {
   width: 10px;
   height: 10px;
@@ -438,3 +458,8 @@ li::before { content: '›'; position: absolute; left: 0; color: var(--primary);
 .workflow__card, .timeline__item { padding: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; }
 .workflow__step { font-size: 3rem; color: rgba(255,255,255,0.05); font-weight: 800; position: absolute; right: 1rem; top: 0rem; user-select: none; }
 .workflow__note { display: inline-block; padding: 0.2rem 0.6rem; background: rgba(0,240,255,0.1); color: var(--primary); border-radius: 5px; font-size: 0.75rem; max-width: max-content; }
+
+@media (pointer: coarse), (hover: none) {
+  * { cursor: auto !important; }
+  .cursor-dot, .cursor-outline { display: none !important; }
+}
