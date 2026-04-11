@@ -12,6 +12,8 @@
   "dependencies": {
     "@mediapipe/face_mesh": "^0.4.1633559619",
     "@tensorflow/tfjs": "^4.22.0",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.8.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-parallax-tilt": "^1.7.319"
