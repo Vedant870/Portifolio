@@ -245,6 +245,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.6rem; /* Ensures icons are separated */
   border-radius: 100px;
   position: relative;
   overflow: hidden;
@@ -253,6 +254,7 @@ body {
   padding: 0.75rem 1.7rem;
   transition: all 0.3s ease;
   z-index: 1;
+  text-decoration: none;
 }
 
 .btn--primary {
@@ -289,6 +291,22 @@ body {
 .btn--outline:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn--ghost {
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.btn--ghost:hover {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+}
+
+.btn--sm {
+  font-size: 0.82rem;
+  padding: 0.5rem 1rem;
 }
 
 .statset {

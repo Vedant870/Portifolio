@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { motion } from 'framer-motion';
+import { BookOpen, ExternalLink, Github, Mail, MessageSquare, Rocket } from 'lucide-react';
 import Tilt from 'react-parallax-tilt';
 import './App.css';
 import profile from './assets/profile.png';
@@ -232,7 +233,7 @@ function App() {
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#contact" className="btn btn--ghost btn--sm">
-            Contact
+            <Mail size={16} /> Contact
           </a>
         </nav>
       </header>
@@ -265,10 +266,10 @@ function App() {
             <FadeIn delay={0.3}>
               <div className="hero__actions">
                 <a href="#projects" className="btn btn--primary">
-                  Explore AI Work
+                  <Rocket size={18} /> Explore AI Work
                 </a>
                 <a href="mailto:vedantkasaudhan@gmail.com" className="btn btn--outline">
-                  Hire / Collaborate
+                  <MessageSquare size={18} /> Hire / Collaborate
                 </a>
               </div>
             </FadeIn>
@@ -388,7 +389,7 @@ function App() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    LinkedIn
+                    <ExternalLink size={16} /> LinkedIn
                   </a>
                   <a
                     className="btn btn--ghost btn--sm"
@@ -396,7 +397,7 @@ function App() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    GitHub
+                    <Github size={16} /> GitHub
                   </a>
                 </div>
               </aside>
@@ -518,7 +519,7 @@ function App() {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        Source
+                        <Github size={16} /> Source
                       </a>
                       <a
                         href={project.demo}
@@ -526,7 +527,7 @@ function App() {
                         target="_blank"
                         rel="noreferrer"
                       >
-                        Overview
+                        <BookOpen size={16} /> Overview
                       </a>
                     </div>
                   </article>
@@ -592,7 +593,7 @@ function App() {
                   required
                 />
                 <button className="btn btn--primary hover-glow" type="submit">
-                  Send Message
+                  <MessageSquare size={18} /> Send Message
                 </button>
                 <p className="form__note">Message will be delivered directly to my email inbox.</p>
               </form>
